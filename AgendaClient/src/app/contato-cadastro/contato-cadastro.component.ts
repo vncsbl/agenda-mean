@@ -14,6 +14,7 @@ export class ContatoCadastroComponent implements OnInit {
   contatos = [];
 
   display: boolean = false;
+
   showDialog(){
     this.display = true;
   }
@@ -55,9 +56,15 @@ export class ContatoCadastroComponent implements OnInit {
   }
 
   editar(id: any, formulario: FormControl){
+<<<<<<< HEAD
     this.service.editar(id, formulario.value).subscribe(() => {
       console.log(formulario.value);
       this.hideDialog();
+=======
+    
+    this.service.editar(id, formulario.value).subscribe(() => {
+      console.log(formulario.value);
+>>>>>>> c0179af2f2fedba050d3851bad4ea3c0b06c2974
       this.carregar();
     }); 
   }
