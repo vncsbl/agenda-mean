@@ -19,8 +19,7 @@ export class ContatoCadastroComponent implements OnInit {
   }
   hideDialog(){
     this.display = false;
-  }
-  
+  }  
 
   constructor(private service: ContatoService, private confirmationService: ConfirmationService) { }
 
