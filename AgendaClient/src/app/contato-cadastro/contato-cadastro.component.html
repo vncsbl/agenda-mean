@@ -44,7 +44,7 @@
               <button type="button" pButton (click)="showDialog()" icon="fa-pencil-square"></button>
 
               <p-dialog header="Atualizar Contato" [(visible)]="display" [width]="600" [responsive]="true">
-                <form #frm="ngForm" (ngSubmit)="editar(contato)">
+                <form #frm="ngForm" (ngSubmit)="editar(contato._id, frm)">
                   <div class="ui-g-6 ui-sm-12 ui-fluid">
                     <label>Nome:</label>
                     <input pInputText name="nome" ngModel required>

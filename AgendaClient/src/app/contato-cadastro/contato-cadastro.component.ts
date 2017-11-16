@@ -55,8 +55,10 @@ export class ContatoCadastroComponent implements OnInit {
     });
   }
 
-  editar(formulario: FormControl){
-    this.service.editar(formulario.value).subscribe(() => {
+  editar(id: any, formulario: FormControl){
+    this.service.editar(id, formulario.value).subscribe(() => {
+      console.log(formulario.value);
+      this.hideDialog();
       this.carregar();
     }); 
   }
