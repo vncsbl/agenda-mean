@@ -27,7 +27,8 @@ module.exports.salva = function (req, res) {
 };
 
 module.exports.edita = function(req, res){
-    Contato.findByIdAndUpdate(req.body._id, req.body).exec()
+    console.log(req.body);
+    Contato.findByIdAndUpdate(req.params.id, req.body).exec()
     .then(
         function (contato) {
             res.json(contato);

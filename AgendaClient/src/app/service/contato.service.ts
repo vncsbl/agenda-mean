@@ -19,8 +19,8 @@ export class ContatoService {
     return this.http.get<any[]>(this.urlServicos);
   }
 
-  editar(contato: any){
-    return this.http.put(this.urlServicos, contato);
+  editar(id: any, contato: any){
+    return this.http.put(this.urlServicos + '/' + id, contato);
   }
   
   remover(id: any) {
